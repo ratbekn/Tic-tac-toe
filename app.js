@@ -11,7 +11,6 @@ cells.forEach(cell => cell.addEventListener(
         if (isGameOver) {
             document.querySelector('#board > h3').remove();
 
-            cells.forEach(cell => cell.textContent = '');
             step = 0;
             isGameOver = false;
         }
@@ -50,6 +49,10 @@ cells.forEach(cell => cell.addEventListener(
             printResult('Draw!');
 
             isGameOver = true;
+        }
+
+        if (isGameOver) {
+            cells.forEach(cell => cell.textContent = '');
         }
     }
 ));
